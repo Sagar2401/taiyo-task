@@ -24,7 +24,6 @@ const ContactList = () => {
     setOpen((current) => !current);
     setID("");
   };
-  console.log(contactListData?.length);
   return (
     <>
       <div className="flex flex-col">

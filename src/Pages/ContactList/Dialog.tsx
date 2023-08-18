@@ -58,7 +58,6 @@ const DialogBox: React.FC<DialogBoxProps> = (props) => {
   const handleOnSubmit = (data: ContactFormData) => {
     const { firstName, lastName, status, id } = data;
 
-    console.log("1", data);
     if (id) {
       editContact(firstName, lastName, status, id);
       return;
@@ -82,7 +81,6 @@ const DialogBox: React.FC<DialogBoxProps> = (props) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue("status", event.target.value);
   };
-  console.log("event", status);
 
   return (
     <Dialog onClose={closeBackHandle} open={isOpen}>

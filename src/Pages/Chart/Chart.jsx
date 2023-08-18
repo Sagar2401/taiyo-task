@@ -66,7 +66,6 @@ const Chart = () => {
       countryCode === "worldwide"
         ? "https://disease.sh/v3/covid-19/countries"
         : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
-    console.log(url);
     await fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -87,14 +86,13 @@ const Chart = () => {
   }, []);
 
   const handleMouseEnter = (geo, d) => {
-    console.log("d", geo);
+    "d", geo;
     setContent(d?.country || "");
   };
 
   const handleMouseLeave = () => {
     setContent("");
   };
-  console.log("content", content);
   return (
     <div className="app">
       <div className="app__left">
