@@ -86,7 +86,6 @@ const Chart = () => {
   }, []);
 
   const handleMouseEnter = (geo, d) => {
-    "d", geo;
     setContent(d?.country || "");
   };
 
